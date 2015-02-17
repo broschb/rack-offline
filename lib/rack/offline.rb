@@ -46,6 +46,7 @@ module Rack
 
       body = ["CACHE MANIFEST"]
       body << "# #{key}"
+      body << "" << "CACHE:"
       @config.cache.each do |item|
         body << URI.escape(item.to_s)
       end
